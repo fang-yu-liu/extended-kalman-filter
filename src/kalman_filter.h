@@ -64,6 +64,10 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
   
+  /**
+   * Shared code for Update and UpdateEKF
+   * @param y The difference between measurement and prediction at k+1
+   */
   void UpdateShared(const Eigen::VectorXd &y);
 };
 
